@@ -18,7 +18,7 @@ const catWalk = () => {
   myCat.style.left = `${currentPosition}px`;
 
   // 6. cat reaches the right-hand of the screen, restart them at the left. So they should keep walking forever ever.
-  if (currentPosition > window.innerWidth) {
+  if (currentPosition > window.innerWidth - myCat.width) {
     myCat.style.left = `${initialPosition}px`;
     dancing = true;
     currentPosition = 0;
