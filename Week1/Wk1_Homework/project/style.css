@@ -1,0 +1,37 @@
+body {
+  background: rgb(255, 196, 0);
+  margin: 5%;
+}
+
+#container {
+  background: #fff;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  padding: 5%;
+}
+
+.btn {
+  background: rgb(255, 196, 0);
+  color: #fff;
+  padding: 1%;
+  font-size: 1.2rem;
+  width: 12%;
+  border: none;
+}
+
+.btn:nth-child(1) {
+  float: right;
+}
+
+#quoteDisplay {
+  width: 100%;
+  color: rgb(255, 196, 0);
+}
+
+#blank {
+  height: 60px;
+  width: 40%;
+  background: #fff;
+  margin: 1% auto;
+}
