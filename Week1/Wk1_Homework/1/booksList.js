@@ -19,9 +19,9 @@ const books_covers = [
   "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg"
 ];
 
+// ul
+const uList = document.createElement("ul");
 books.forEach(element => {
-  // ul
-  const uList = document.createElement("ul");
 
   // li for each book info & book cover
   const book = document.createElement("li");
