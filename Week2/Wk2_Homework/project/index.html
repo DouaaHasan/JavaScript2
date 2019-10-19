@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>The Pomodoro Clock</title>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Pomodoro Clock</h1>
+    <h2>Session Length</h2>
+
+    <div id="inputContainer">
+      <button id="plusMin">▲</button>
+      <input id="input" type="text" value="25">
+      <button id="minusMin">▼</button>
+    </div>
+
+    <div id="displayContainer">
+      <h2>Session</h2>
+      <h2 id="timer"> <span id="min"></span> : <span id="sec"></span> </h2>
+    </div>
+    <button id="playBtn">►</button>
+    <button id="pauseBtn">||</button>
+  </div>
+
+  <script src="./project.js"></script>
+</body>
+
+</html>
