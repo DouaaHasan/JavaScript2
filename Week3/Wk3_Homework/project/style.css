@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+  background: rgb(104, 14, 14);
+  font-size: 1.5rem;
+}
+
+#container {
+  background: #fff;
+  width: 40%;
+  margin: auto;
+  border-radius: 10%;
+}
+
+#container h1 {
+  color: #fff;
+  padding: 1%;
+  background: transparent;
+}
+
+#calcBtn {
+  background: rgb(189, 44, 169);
+  border-radius: 6%;
+  border: none;
+  margin: 2%;
+  padding: 3%;
+  color: #fff;
+  width: 35%;
+  font-weight: bold;
+}
+
+input {
+  width: 50%;
+}
+
+select {
+  margin: 3%;
+}
+
+#black {
+  background: #000;
+}
