@@ -6,7 +6,7 @@ calcBtn.addEventListener('click', e => {
   const tipHeader = document.getElementById('tip');
   tipHeader.innerText = '$';
 
-  e.preventDefault(); // Prevent the button from submitting the form
+  e.preventDefault(); // Prevent the button from submitting the form to prevent the browser field required alert from being shown every time we click the calcBtn.
 
   // The amount of the bill
   const billAmount = document.getElementById('bill').value;
@@ -15,44 +15,40 @@ calcBtn.addEventListener('click', e => {
   const pplAmount = document.getElementById('ppl').value;
 
   // If there's only 1 person who shares the bill, output only the tip amount (omit the "each")
-  if (pplAmount === '1') {
-    document.getElementById('each').innerText = '';
-  }
+  if (pplAmount === '1') document.getElementById('each').innerText = '';
 
   // How good the service was
   const service = document.getElementById('service').value;
-  let tipAmount;
+  let tipAmount = 0;
 
-  // calculating the service
-  if (service !== 'default') {
-    switch (service) {
-      case '30%':
-        tipAmount = (billAmount * 30) / 100;
-        break;
-      case '20%':
-        tipAmount = (billAmount * 20) / 100;
-        break;
-      case '15%':
-        tipAmount = (billAmount * 15) / 100;
-        break;
-      case '10%':
-        tipAmount = (billAmount * 10) / 100;
-        break;
-      case '5%':
-        tipAmount = (billAmount * 5) / 100;
-        break;
-      default:
-        tipAmount;
-    }
+  // calculating the tipAmount
+  switch (service) {
+    case '30%':
+      tipAmount = (billAmount * 30) / 100;
+      break;
+    case '20%':
+      tipAmount = (billAmount * 20) / 100;
+      break;
+    case '15%':
+      tipAmount = (billAmount * 15) / 100;
+      break;
+    case '10%':
+      tipAmount = (billAmount * 10) / 100;
+      break;
+    case '5%':
+      tipAmount = (billAmount * 5) / 100;
+      break;
+    default:
+      tipAmount;
   }
 
   // validation // If any of the input fields are empty when the button is clicked, call an alert that says: "You need to fill in all the fields!"
 
   if (
     billAmount.trim() === '' ||
-    pplAmount === '' ||
     billAmount.trim() === '0' ||
-    pplAmount === '0' ||
+    pplAmount.trim() === '' ||
+    pplAmount.trim() === '0' ||
     service === 'default'
   ) {
     alert(
